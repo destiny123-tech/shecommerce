@@ -1,0 +1,23 @@
+header[role=banner] {
+  margin: 20px 0 30px 0;
+  border-bottom: 4px solid #333;
+}
+
+header[role=banner] #logo {
+  float: left;
+  margin: 0 20px 0 0;
+}
+
+header[role=banner] img {
+  display: block;
+  opacity: 0.95;
+}
+
+h1 {
+  padding: 15px 0;
+  font-size: 54px;
+  line-height: 1;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+}
+

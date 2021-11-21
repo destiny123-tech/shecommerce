@@ -1,0 +1,82 @@
+@import 'variables';
+/* Mixins */
+// Border-Radius
+@mixin rounded($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+//Box-Shadow
+@mixin shadow($x, $y, $blur, $color) {
+    -webkit-box-shadow: $x $y $blur $color;
+    -moz-box-shadow: $x $y $blur $color;
+    box-shadow: $x $y $blur $color;
+}
+//LinearGradient
+@mixin linear-gradient($from, $to) {
+    // Fallback for sad browsers
+    background-color: $to;
+    // Mozilla FIrefox
+    background-image: -moz-linear-gradient($from, $to);
+    // Opera
+    background-image: -o-linear-gradient($from, $to);
+    // Webkit (Safari 4+, Chrome 1+)
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, $from) color-stop(1, $to));
+    // Webkit (Chrome 11+)
+    background-image: -webkit-linear-gradient($from, $to);
+    // IE10
+    background-image: -ms-linear-gradient($from, $to);
+    // W3C
+    background-image: linear-gradient($from, $to);
+}
+// Opacity
+@mixin opacity($time, $ease) {
+    -webkit-transition: opacity $time $ease;
+    -moz-transition: opacity $time $ease;
+    -o-transition: opacity $time $ease;
+    transition: opacity $time $ease;
+}
+// Translate
+@mixin translateY($value) {
+    -ms-transform: translateY($value);
+    transform: translateY($value);
+}
+@mixin translate($x, $y) {
+    -ms-transform: translate($x, $y);
+    transform: translate($x, $y);
+}
+// Media
+@mixin max-responsive($width) {
+    @if $width == wide-screens {
+        @media only screen and (max-width: $width-large) {
+            @content; 
+        }
+    }
+    @else if $width == medium-screens {
+        @media only screen and (max-width: $width-medium) { 
+            @content; 
+        }
+    }
+    @else if $width == small-screens {
+        @media only screen and (max-width: $width-small) {
+            @content; 
+        }
+    }
+}
+@mixin min-responsive($width) {
+    @if $width == wide-screens {
+        @media only screen and (min-width: $width-large) {
+            @content; 
+        }
+    }
+    @else if $width == medium-screens {
+        @media only screen and (min-width: $width-medium) { 
+            @content; 
+        }
+    }
+    @else if $width == small-screens {
+        @media only screen and (min-width: $width-small) {
+            @content; 
+        }
+    }
+}
