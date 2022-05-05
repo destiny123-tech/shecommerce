@@ -10960,6 +10960,13 @@ a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
+    
+  .myowncss 
+    {
+        color : red ; 
+        margin : 10px; 
+        padding : 20px; 
+    }
 }
 
 /* Mixins */
