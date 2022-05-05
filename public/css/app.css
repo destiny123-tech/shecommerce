@@ -6997,6 +6997,11 @@ a.close.disabled {
   vertical-align: baseline !important;
 }
 
+.anotherChange
+{
+    background-color: black;
+}
+
 .align-top {
   vertical-align: top !important;
 }
@@ -10960,12 +10965,12 @@ a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
-    
-  .myowncss 
+
+  .myowncss
     {
-        color : red ; 
-        margin : 10px; 
-        padding : 20px; 
+        color : red ;
+        margin : 10px;
+        padding : 20px;
     }
 }
 
